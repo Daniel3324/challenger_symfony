@@ -8,9 +8,6 @@ WebServices en RestFull usando el Framework Symfony 4.4, capaz de buscar un tipo
 
 - PHP >= 7.1.3
 - Symfony 4.4
-- composer require guzzlehttp/guzzle
-- composer require annotations
-- composer require symfony/validator
 
 ## Especificación
       Operation:
@@ -74,4 +71,15 @@ Error food NOT FOUND:
     "code": 404,
     "message": "BEER_NOT_FOUND"
 }
+```
+
+## Teste funcional
+
+```shell
+php bin/phpunit tests/Controller/
+```
+
+## Teste unitario 
+```shell
+php bin/phpunit tests/Services/
 ```
