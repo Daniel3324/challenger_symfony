@@ -20,7 +20,7 @@ class PunkController
     }
 
     /**
-     * @Route("/punk", methods={"GET","POST"})
+     * @Route("/punk", methods={"GET"})
      */
     public function show(Request $request)
     {
@@ -57,7 +57,7 @@ class PunkController
         ]);
         if (count($violations) > 0) {
             foreach ($violations as $violation) {
-                $message= $violation->getMessage();
+                $message= $violation->getMessage().'->food';
             }
             throw new Exception($message, 401);
         }else{            
